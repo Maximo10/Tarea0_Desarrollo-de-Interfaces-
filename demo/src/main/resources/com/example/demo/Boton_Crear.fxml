@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane id="crear_ficha" prefHeight="424.0" prefWidth="500.0" style="-fx-background-color: white; -fx-border-color: #B0B0B0; -fx-border-radius: 10; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.CreateEmployeeModalController">
+
+    <children>
+
+        <!-- Header -->
+        <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="20.0" prefHeight="49.0" prefWidth="460.0" spacing="10">
+            <children>
+                <Label style="-fx-font-size: 30; -fx-text-fill: green;" text="➕" />
+                <VBox spacing="5">
+                    <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Crear Nueva Ficha de Empleado" />
+                    <Label style="-fx-text-fill: grey; -fx-font-size: 13;" text="Añade un nuevo empleado a tu organización" />
+                </VBox>
+                <Label fx:id="badgeLabel" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: #EEE; -fx-padding: 4 8; -fx-background-radius: 5; -fx-font-weight: bold; -fx-text-fill: #333;" text="#0" />
+            </children>
+        </HBox>
+
+        <Separator layoutX="20.0" layoutY="70.0" prefWidth="460.0" />
+
+        <!-- Formulario -->
+        <VBox layoutX="20.0" layoutY="79.0" prefWidth="460.0" spacing="10">
+            <children>
+                <!-- Sección Nombre -->
+                <VBox prefHeight="48.0" prefWidth="460.0">
+                   <children>
+                      <Label style="-fx-font-size: 15;" text="Nombre *" />
+                          <TextField fx:id="nameField" prefHeight="34.0" prefWidth="460.0" promptText="Nombre" />
+                   </children>
+                </VBox>
+                <!-- Sección Apellidos-->
+                <VBox prefHeight="0.0" prefWidth="460.0">
+                   <children>
+                      <Label prefHeight="21.0" prefWidth="74.0" style="-fx-font-size: 15;" text="Apellidos *" />
+                          <TextField fx:id="lastNameField" promptText="Apellidos" />
+                   </children>
+                </VBox>
+                <!-- Sección Edad-->
+                <VBox prefHeight="31.0" prefWidth="460.0">
+                   <children>
+                      <Label style="-fx-font-size: 15;" text="Edad *" />
+                          <TextField fx:id="roleField" promptText="Puesto" />
+                   </children>
+                </VBox>
+                <!-- Departamento -->
+                <VBox>
+                    <Label text="Departamento *" style="-fx-font-size: 15;" />
+                    <ComboBox fx:id="departmentCombo" promptText="Selecciona un departamento" prefWidth="500.0" />
+                </VBox>
+
+                <!-- Puesto -->
+                <VBox>
+                    <Label text="Puesto *" style="-fx-font-size: 15;" />
+                    <ComboBox fx:id="roleCombo" promptText="Selecciona un puesto" prefWidth="500.0" />
+                </VBox>
+            </children>
+        </VBox>
+
+        <!-- Botones -->
+        <HBox layoutX="151.0" layoutY="364.0" spacing="20">
+            <children>
+                <Button fx:id="cancelButton" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-color: #505050; -fx-border-radius: 8; -fx-border-width: 2;" text="Cancelar" />
+                <Button fx:id="submitButton" prefHeight="35.0" prefWidth="160.0" style="-fx-background-color: green; -fx-background-radius: 5; -fx-font-weight: bold;" text="Crear Empleado" textFill="white" />
+            </children>
+        </HBox>
+
+    </children>
+</Pane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane id="borrar_ficha" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+
+    <children>
+
+        <!-- Encabezado con ícono y título -->
+        <HBox layoutX="33.0" layoutY="24.0" spacing="10">
+            <children>
+                <Label style="-fx-font-size: 40;" text="⚠" textFill="RED" />
+                <Label style="-fx-font-size: 25; -fx-font-weight: bold;" text="¿Confirmar eliminación?" textFill="RED" />
+            </children>
+        </HBox>
+
+        <!-- Separador -->
+        <Separator layoutX="30.0" layoutY="70.0" prefWidth="540.0" />
+
+        <!-- Texto explicativo -->
+        <Label layoutX="30.0" layoutY="90.0" prefWidth="540.0" style="-fx-font-size: 14;" text="Esta acción eliminará permanentemente la ficha de empleado:" wrapText="true" />
+
+        <!-- Caja gris con datos del empleado -->
+        <VBox layoutX="30.0" layoutY="130.0" prefWidth="540.0" style="-fx-background-color: #E0E0E0; -fx-background-radius: 5; -fx-padding: 10;">
+            <children>
+                <Label style="-fx-font-size: 14; -fx-font-weight: bold;" text="María García López" />
+                <Label style="-fx-font-size: 13;" text="Desarrollador/a - Desarrollo" />
+            </children>
+        </VBox>
+
+        <!-- Texto de advertencia en rojo -->
+        <Label layoutX="29.0" layoutY="221.0" style="-fx-text-fill: red; -fx-font-size: 20; -fx-font-weight: bold;" text="⚠ Esta acción no se puede deshacer." />
+
+        <!-- Botones -->
+        <HBox layoutX="200.0" layoutY="320.0" spacing="20">
+            <children>
+                <Button prefHeight="35.0" prefWidth="155.0" style="-fx-background-color: white; -fx-border-color: #505050; -fx-border-radius: 8; -fx-border-width: 2;" text="Cancelar" />
+                <Button prefHeight="35.0" prefWidth="180.0" style="-fx-background-color: #BD0000; -fx-background-radius: 5; -fx-font-weight: bold;" text="Eliminar Empleado" textFill="white" />
+            </children>
+        </HBox>
+
+    </children>
+</Pane>

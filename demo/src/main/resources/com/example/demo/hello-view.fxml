@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane id="Principal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="983.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 20; -fx-background-radius: 20;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+
+    <children>
+          <Label layoutX="120.0" layoutY="46.0" prefHeight="32.0" prefWidth="270.0" text="Sistema de Gestión RRHH">
+              <font>
+                <Font name="Inter Regular" size="22.0" />
+              </font>
+          </Label>
+        <ImageView fitHeight="52.0" fitWidth="57.0" layoutX="52.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../imagenes/RRHH.png" />
+            </image>
+        </ImageView>
+
+        <!-- PANEL Informacion -->
+        <Pane id="Info_Emple" layoutX="40.0" layoutY="90.0" prefHeight="358.0" prefWidth="605.0" style="-fx-background-color: #FFF9F9; -fx-border-color: black; -fx-border-radius: 20;">
+            <children>
+                <Circle layoutX="73.0" layoutY="65.0" radius="39.0" stroke="WHITE" strokeType="INSIDE" />
+            <ImageView fitHeight="56.0" fitWidth="57.0" layoutX="45.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../imagenes/gestor.png" />
+               </image>
+            </ImageView>
+                <Pane layoutX="124.0" layoutY="30.0" prefHeight="70.0" prefWidth="330.0" style="-fx-background-color: #FFF5F5; -fx-border-width: 2; -fx-border-color: black; -fx-border-radius: 8;">
+                    <children>
+                        <Label fx:id="lblNombre" layoutX="31.0" layoutY="17.0" text="María García López">
+                            <font><Font size="24.0" /></font>
+                        </Label>
+                    </children>
+                </Pane>
+
+                <Line endX="421.0" layoutX="158.0" layoutY="125.0" startX="-123.0" />
+
+                <Pane layoutX="34.0" layoutY="144.0" prefHeight="70.0" prefWidth="262.0" style="-fx-background-color: #FFF5F5; -fx-border-width: 2; -fx-border-color: black; -fx-border-radius: 8;">
+                    <children>
+                        <Label layoutX="66.0" layoutY="14.0" text="Edad" textFill="#505050">
+                            <font><Font size="16.0" /></font>
+                        </Label>
+                        <Label id="info_edad" fx:id="lblEdad" layoutX="66.0" layoutY="35.0" text="25 años">
+                            <font><Font size="20.0" /></font>
+                        </Label>
+                  <ImageView fitHeight="39.0" fitWidth="69.0" layoutX="22.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagenes/ico.png" />
+                     </image>
+                  </ImageView>
+                    </children>
+                </Pane>
+
+                <Pane layoutX="304.0" layoutY="144.0" prefHeight="70.0" prefWidth="286.0" style="-fx-background-color: #FFF5F5; -fx-border-width: 2; -fx-border-color: black; -fx-border-radius: 8;">
+                    <children>
+                        <Label layoutX="66.0" layoutY="14.0" text="Puesto" textFill="#505050">
+                            <font><Font size="16.0" /></font>
+                        </Label>
+                        <Label id="info_puesto" fx:id="lblPuesto" layoutX="67.0" layoutY="34.0" text="Coordinador">
+                            <font><Font size="20.0" /></font>
+                        </Label>
+                  <ImageView fitHeight="39.0" fitWidth="36.0" layoutX="24.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagenes/ico2.png" />
+                     </image>
+                  </ImageView>
+                    </children>
+                </Pane>
+
+                <Pane layoutX="34.0" layoutY="233.0" prefHeight="70.0" prefWidth="306.0" style="-fx-background-color: #FFF5F5; -fx-border-width: 2; -fx-border-color: black; -fx-border-radius: 8;">
+                    <children>
+                        <Label layoutX="68.0" layoutY="14.0" text="Departamento" textFill="#505050">
+                            <font><Font size="16.0" /></font>
+                        </Label>
+                        <Label id="info_depar" fx:id="lblDepartamento" layoutX="68.0" layoutY="35.0" text="Desarrollo">
+                            <font><Font size="20.0" /></font>
+                        </Label>
+                  <ImageView fitHeight="39.0" fitWidth="36.0" layoutX="23.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagenes/ico3.png" />
+                     </image>
+                  </ImageView>
+                    </children>
+                </Pane>
+            </children>
+        </Pane>
+
+        <!-- PANEL ACCIONES -->
+        <Pane id="acciones" layoutX="670.0" layoutY="115.0" prefHeight="309.0" prefWidth="270.0" style="-fx-background-color: #FFF9F9; -fx-border-color: black; -fx-border-radius: 20;">
+            <children>
+
+                <Label layoutX="24.0" layoutY="21.0" text="Acciones">
+                    <font><Font size="24.0" /></font>
+                </Label>
+                <Button fx:id="btnCrear" layoutX="24.0" layoutY="76.0" prefHeight="25.0" prefWidth="223.0" style="-fx-background-color: black; -fx-border-width: 2; -fx-border-color: white; -fx-border-radius: 8;" text="Crear Nueva Ficha" textAlignment="CENTER" textFill="WHITE">
+                    <font><Font size="16.0" /></font>
+                </Button>
+
+                <Button fx:id="btnEditar" layoutX="24.0" layoutY="126.0" prefWidth="223.0" style="-fx-background-color: white; -fx-border-width: 2; -fx-border-color: black; -fx-border-radius: 8;" text="Editar Ficha">
+                    <font><Font size="16.0" /></font>
+                </Button>
+
+                <Button fx:id="btnVerLista" layoutX="23.0" layoutY="176.0" prefWidth="223.0" style="-fx-background-color: white; -fx-border-width: 2; -fx-border-color: black; -fx-border-radius: 8;" text="Ver Lista Fichas">
+                    <font><Font size="16.0" /></font>
+                </Button>
+
+                <Button fx:id="btnBorrar" layoutX="23.0" layoutY="228.0" prefHeight="25.0" prefWidth="223.0" style="-fx-background-color: BD0000; -fx-border-width: 2; -fx-border-color: black; -fx-border-radius: 8;" text="Borrar Ficha" textFill="WHITE">
+                    <font><Font size="16.0" /></font>
+                </Button>
+                <Line endX="201.5" layoutX="45.0" layoutY="64.0" startX="-19.5" />
+            </children>
+        </Pane>
+
+        <!-- PANEL PAGINACIÓN -->
+        <Pane id="paginado" layoutX="40.0" layoutY="474.0" prefHeight="78.0" prefWidth="605.0" style="-fx-background-color: #FFF9F9; -fx-border-color: black; -fx-border-radius: 8;">
+            <children>
+                <Button fx:id="btnAnterior" layoutX="31.0" layoutY="22.0" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #FFF9F9; -fx-border-width: 2; -fx-border-color: black; -fx-border-radius: 10;" text="Anterior">
+                    <font><Font size="14.0" /></font>
+                </Button>
+
+                <Label fx:id="lblPagina" layoutX="253.0" layoutY="29.0" prefWidth="100.0" style="-fx-alignment: center; -fx-background-color: #FFF9F9;" text="Página 1 de 1">
+                    <font><Font size="14.0" /></font>
+                </Label>
+
+                <Button fx:id="btnSiguiente" layoutX="412.0" layoutY="22.0" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #FFF9F9; -fx-border-width: 2; -fx-border-color: black; -fx-border-radius: 10;" text="Siguiente">
+                    <font><Font size="14.0" /></font>
+                </Button>
+            </children>
+        </Pane>
+
+        <!-- PANEL ARCHIVO -->
+        <Pane id="selector" layoutX="661.0" layoutY="473.0" prefHeight="78.0" prefWidth="279.0" style="-fx-background-color: #FFF9F9; -fx-border-color: black; -fx-border-radius: 8;">
+         <children>
+             <ComboBox fx:id="comboArchivo" layoutX="29.0" layoutY="33.0" prefHeight="25.0" prefWidth="202.0" promptText="Selecciona el tipo de archivo" />
+             <Label layoutX="28.0" layoutY="14.0" prefHeight="21.0" prefWidth="238.0" text="Selector de Archivo">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+        </Pane>
+    </children>
+</Pane>
